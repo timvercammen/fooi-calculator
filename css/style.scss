@@ -1,0 +1,207 @@
+$bright_cyan: hsl(172, 67%, 45%);
+$v_dark_cyan: hsl(183, 100%, 15%);
+$dark_gray_cyan: hsl(186, 14%, 43%);
+$dark_grayish_cyan: hsl(184, 14%, 56%);
+$light_grayisch_cyan: hsl(185, 41%, 84%);
+$light_gray_cyan: hsl(189, 41%, 97%);
+
+@use "./base/reset";
+@use "./base/extends";
+@use "./base/variables";
+@use "./base/fonts";
+
+
+body {
+	background-color: $light_grayisch_cyan;
+}
+h1 {
+	text-align: center;
+	font-size: 25px;
+	line-height: 35px;
+	letter-spacing: 10px;
+	color: $v_dark_cyan;
+	text-transform: uppercase;
+	font-family: "Space Mono";
+	margin: 90px auto;
+}
+main {
+	width: 90%;
+	margin: 20px auto;
+	max-width: 920px;
+	background-color: $light_gray_cyan;
+	border-radius: 20px;
+	font-family: "Space Mono";
+}
+.cols {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+	.insert {
+		display: flex;
+		flex-direction: column;
+		width: 45%;
+		margin: 30px 0 30px 30px;
+		min-height: 400px;
+		gap: 20px;
+		.bill {
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			margin: auto;
+			height: 25%;
+			margin-top: 10px;
+			input {
+				height: 50%;
+				margin: 10px 0px;
+				color: $v_dark_cyan;
+				border: transparent;
+				&::before {
+					height: 50%;
+					margin: 10px 0px;
+					color: $v_dark_cyan;
+					border: transparent;
+					content: "\e000";
+					font-family: icons;
+				}
+			}
+		}
+		.select {
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			margin: auto;
+			height: 50%;
+			.percentage {
+				display: inline;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				button {
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					background-color: $v_dark_cyan;
+					color: $light_gray_cyan;
+					border-radius: 5px;
+					width: 30%;
+					height: 40%;
+					margin: 6px auto;
+					tab-size: 18px;
+					border: none;
+					&:last-child {
+						background-color: $light_gray_cyan;
+						color: $dark_gray_cyan;
+					}
+					&:hover {
+						background-color: $bright_cyan;
+						color: $v_dark_cyan;
+					}
+				}
+			}
+		}
+		.people {
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			margin: auto;
+			height: 25%;
+			margin-bottom: 10px;
+			input {
+				height: 50%;
+				margin: 10px 0px;
+				color: $v_dark_cyan;
+				text-align: right;
+				border: transparent;
+				&::before {
+					font-family: icons;
+					content: "\e001";
+					font-size: 20px;
+					color: $dark_grayish_cyan;
+				}
+			}
+		}
+		h3 {
+			font-size: 14px;
+			color: $dark_gray_cyan;
+			height: 30%;
+			padding: 10px;
+		}
+	}
+	.calculation {
+		width: 45%;
+		background-color: $v_dark_cyan;
+		margin: 30px 30px 30px 0;
+		border-radius: 15px;
+		min-height: 400px;
+		display: flex;
+		flex-direction: column;
+		width: 45%;
+		background-color: $v_dark_cyan;
+		margin: 30px 30px 30px 0;
+		border-radius: 15px;
+		min-height: 400px;
+		.tip_amount {
+			display: flex;
+			justify-content: space-between;
+			width: 80%;
+			margin: 65px 40px 0px 40px;
+			height: 25%;
+			.info {
+				height: 25%;
+				h3 {
+					color: $light_gray_cyan;
+					font-size: 14px;
+					margin-bottom: 5px;
+				}
+				p {
+					color: $dark_grayish_cyan;
+					font-size: 12px;
+				}
+			}
+			input {
+				display: inline-flex;
+				//border: transparent;
+				background-color: $v_dark_cyan;
+				height: 35%;
+			}
+		}
+		.total {
+			display: flex;
+			justify-content: space-between;
+			width: 80%;
+			margin: 0px 40px;
+			height: 25%;
+			.info {
+				height: 25%;
+				h3 {
+					color: $light_gray_cyan;
+					font-size: 14px;
+					margin-bottom: 5px;
+				}
+				p {
+					color: $dark_grayish_cyan;
+					font-size: 12px;
+					margin-bottom: 5px;
+				}
+			}
+			input {
+				display: inline-flex;
+				//border: transparent;
+				background-color: $v_dark_cyan;
+				height: 35%;
+			}
+		}
+		button {
+			align-self: center;
+			width: 80%;
+			height: 50px;
+			border-radius: 5px;
+			background-color: $bright_cyan;
+			color: $v_dark_cyan;
+			border: transparent;
+			text-decoration: none;
+			margin-top: 35px;
+		}
+	}
+}
+

@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+h1 {
+  text-align: center;
+  font-size: 25px;
+  line-height: 35px;
+  letter-spacing: 10px;
+  color: #00494d;
+  text-transform: uppercase;
+  font-family: "Space Mono";
+  margin: 90px auto;
+}
+
+main {
+  width: 90%;
+  margin: 20px auto;
+  max-width: 920px;
+  background-color: #f4fafa;
+  border-radius: 20px;
+  font-family: "Space Mono";
+}
+
+.cols {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.cols .insert {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 30px 0 30px 30px;
+  min-height: 400px;
+  gap: 20px;
+}
+.cols .insert .bill {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  height: 25%;
+  margin-top: 10px;
+}
+.cols .insert .bill input {
+  height: 50%;
+  margin: 10px 0px;
+  color: #00494d;
+  border: transparent;
+}
+.cols .insert .bill input::before {
+  height: 50%;
+  margin: 10px 0px;
+  color: #00494d;
+  border: transparent;
+  content: "\e000";
+  font-family: icons;
+}
+.cols .insert .select {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  height: 50%;
+}
+.cols .insert .select .percentage {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.cols .insert .select .percentage button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00494d;
+  color: #f4fafa;
+  border-radius: 5px;
+  width: 30%;
+  height: 40%;
+  margin: 6px auto;
+  tab-size: 18px;
+  border: none;
+}
+.cols .insert .select .percentage button:last-child {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+}
+.cols .insert .select .percentage button:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+.cols .insert .people {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  height: 25%;
+  margin-bottom: 10px;
+}
+.cols .insert .people input {
+  height: 50%;
+  margin: 10px 0px;
+  color: #00494d;
+  text-align: right;
+  border: transparent;
+}
+.cols .insert .people input::before {
+  font-family: icons;
+  content: "\e001";
+  font-size: 20px;
+  color: #7f9c9f;
+}
+.cols .insert h3 {
+  font-size: 14px;
+  color: #5e7a7d;
+  height: 30%;
+  padding: 10px;
+}
+.cols .calculation {
+  width: 45%;
+  background-color: #00494d;
+  margin: 30px 30px 30px 0;
+  border-radius: 15px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: #00494d;
+  margin: 30px 30px 30px 0;
+  border-radius: 15px;
+  min-height: 400px;
+}
+.cols .calculation .tip_amount {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 65px 40px 0px 40px;
+  height: 25%;
+}
+.cols .calculation .tip_amount .info {
+  height: 25%;
+}
+.cols .calculation .tip_amount .info h3 {
+  color: #f4fafa;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.cols .calculation .tip_amount .info p {
+  color: #7f9c9f;
+  font-size: 12px;
+}
+.cols .calculation .tip_amount input {
+  display: inline-flex;
+  background-color: #00494d;
+  height: 35%;
+}
+.cols .calculation .total {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0px 40px;
+  height: 25%;
+}
+.cols .calculation .total .info {
+  height: 25%;
+}
+.cols .calculation .total .info h3 {
+  color: #f4fafa;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.cols .calculation .total .info p {
+  color: #7f9c9f;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.cols .calculation .total input {
+  display: inline-flex;
+  background-color: #00494d;
+  height: 35%;
+}
+.cols .calculation button {
+  align-self: center;
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  color: #00494d;
+  border: transparent;
+  text-decoration: none;
+  margin-top: 35px;
+}
+
+/*# sourceMappingURL=style.css.map */
